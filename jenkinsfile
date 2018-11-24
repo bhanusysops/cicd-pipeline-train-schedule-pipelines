@@ -1,0 +1,15 @@
+pipeline {
+agent any
+stages {
+
+stage('build'){
+steps {
+echo 'build Automation starts'
+sh './gradle build'
+archiveArticrafts artifacts: 'dist/trainSchedule.zip'
+       }
+
+}
+
+}
+}
