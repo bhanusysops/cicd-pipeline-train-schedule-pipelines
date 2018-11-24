@@ -5,7 +5,7 @@ stages {
 stage('build'){
 steps {
 echo 'build Automation starts'
-sh './gradle build'
+sh './gradle build --no-daemon'
 archiveArticrafts artifacts: 'dist/trainSchedule.zip'
        }
 
